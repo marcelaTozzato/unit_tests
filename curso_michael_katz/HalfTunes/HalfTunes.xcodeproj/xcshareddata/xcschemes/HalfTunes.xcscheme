@@ -47,6 +47,16 @@
                ReferencedContainer = "container:HalfTunes.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1FAB533D238B3EE800C19B1F"
+               BuildableName = "HalfTunesFakeTests.xctest"
+               BlueprintName = "HalfTunesFakeTests"
+               ReferencedContainer = "container:HalfTunes.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
