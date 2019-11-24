@@ -53,8 +53,9 @@ class BullsEyeGame {
 
   @discardableResult
   func check(guess: Int) -> Int {
-//    let difference = abs(targetValue - guess)
-    let difference = guess - targetValue
+    //Adicionamos o Test Failure Breakpoint (command + 8), desta forma, quando o teste falha o xcode adiciona um breakpoint para que possamos fazer o debug. Neste caso percebemos que o valor da diferença deve ser absoluto, pois não importa se o usuário errou 5 para mais ou 5 para menos, a diferença continu sendo 5 e portanto o score dele deve ser de 95 e nunca de 105 (caso em que ele erra para menos: 100 - (-5) = 105. Portanto trocamos o código comentado pelo código que segue:
+    let difference = abs(targetValue - guess)
+    //let difference = guess - targetValue
     scoreRound = 100 - difference
     scoreTotal = scoreTotal + scoreRound
     
