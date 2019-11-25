@@ -84,5 +84,21 @@ class HalfTunesFakeTests: XCTestCase {
       super.tearDown()
         
     }
+  
+  //TESTE DE PERFORMANCE:
+  //From Apple’s documentation: A performance test takes a block of code that you want to evaluate and runs it ten times, collecting the average execution time and the standard deviation for the runs. The averaging of these individual measurements form a value for the test run that can then be compared against a baseline to evaluate success or failure.
+  
+  //Para implementar um teste de performance: colocar o código que você deseja mensurar dentro da closure measure()
+  
+  func test_StartDownload_Performance() {
+    let track = Track(name: "Waterloo", artist: "ABBA", previewUrl: "http://a821.phobos.apple.com/us/r30/Music/d7/ba/ce/mzm.vsyjlsff.aac.p.m4a")
+    
+    measure {
+      self.sut.startDownload(track)
+    }
+    
+  }
+  
+  //Depois de rodar o teste clicar no simbolo na linha do measure() para ver o resultado. Podemos setar o resultado como o baseline. E cada vez que fizermos alguma alteração no código podemos verificar o impacto no código que esta sendo testado.
 
 }
